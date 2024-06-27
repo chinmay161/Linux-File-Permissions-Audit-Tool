@@ -11,7 +11,7 @@ The primary objective of this project is to develop a comprehensive and user-fri
    - Gained proficiency in managing and navigating the Linux command line interface and utilizing system administration tools.
 
 2. **Scripting and Automation:**
-   - Developed advanced Bash scripting skills to automate the process of file permissions auditing.
+   - Developed advanced Python scripting skills to automate the process of file permissions auditing.
    - Learned to write clean, efficient, and reusable scripts that perform complex tasks with minimal user input.
 
 3. **Cybersecurity Fundamentals:**
@@ -27,9 +27,9 @@ The primary objective of this project is to develop a comprehensive and user-fri
    - Learned how to audit systems for compliance with security best practices and regulatory standards.
 
 ### Tools Used
-This project primarily utilizes Bash scripting along with standard Linux command-line tools to audit file permissions. Here are the main tools and technologies used in the project:
+This project primarily utilizes Python scripting along with standard Linux command-line tools to audit file permissions. Here are the main tools and technologies used in the project:
 
-1. **Bash Scripting:** Bash (Bourne Again Shell) is the scripting language used to develop the Audit tool. It provides a powerful and flexible environment for automating tasks and interacting with the Linux operating system.
+1. **Python Scripting:**  Python is the scripting language used to develop the Audit tool. It provides a powerful and flexible environment for automating tasks and interacting with the Linux operating system.
 
 2. **Linux Command-Line Tools:**
    - `stat`: Used to retrieve file or file system status.
@@ -43,21 +43,32 @@ This project primarily utilizes Bash scripting along with standard Linux command
 4. **Development Environment:**
    - A Linux environment (e.g., Ubuntu, CentOS, Debian) serves as the development environment for writing, testing, and executing the Bash script.
 
-These tools, combined with Bash scripting, enable the project to effectively audit file permissions and enhance the security posture of Linux systems.
+These tools, combined with Python scripting, enable the project to effectively audit file permissions and enhance the security posture of Linux systems.
 ## Steps
 To execute the provided Bash script, follow these steps:
 
 ### Step 1: Prepare Your Environment
-Ensure that you have access to a Linux system where you intend to run the script. Make sure you have appropriate permissions to access the directories you want to audit.
-
-### Step 2: Copy the Script
-Copy the provided Bash script into a text editor or directly into a file on your Linux system. Save the file with a `.sh` extension, for example, `File_Permissions.sh`.
-
-### Step 3: Set Execution Permissions
-Make the script executable by running the following command in your terminal:
+Ensure that you have access to a Linux system where you intend to run the script. Make sure you have Python installed on your system. You can check this by running:
 
 ```bash
-chmod +x File_Permissions.sh
+python3 --version
+```
+
+If Python is not installed, you can install it using your package manager. For example, on Ubuntu, you can run:
+
+```bash
+sudo apt-get update
+sudo apt-get install python3
+```
+
+### Step 2: Copy the Script
+Copy the provided Python script into a text editor or directly into a file on your Linux system. Save the file with a `.py` extension, for example, `file_permissions.py`.
+
+### Step 3: Set Execution Permissions
+Although not necessary for Python scripts, you can make the script executable by running the following command in your terminal:
+
+```bash
+chmod +x File_Permissions.py
 ```
 
 This command grants execute permissions to the script, allowing you to run it as a standalone executable.
@@ -66,22 +77,23 @@ This command grants execute permissions to the script, allowing you to run it as
 Execute the script by running the following command in your terminal:
 
 ```bash
-./File_Permissions.sh <directory>
-```
-You can also execute the script using `bash` keyword
-
-```bash
-bash File_Permissions.sh <directory>
+python3 file_permissions.py <directory>
 ```
 
 Replace `<directory>` with the path to the directory you want to audit for file permissions. For example:
 
 ```bash
-./File_Permissions.sh /home
+./File_Permissions.py /home
 ```
 
 ### Step 5: Review the Output
-Once the script completes execution, it will display a report showing the file permissions within the specified directory for all users on the system. Review the output to identify any security risks or misconfigurations.
+The script effectively identifies and reports on file permissions within the specified directory, offering valuable insights into potential security risks. By acting on the recommendations provided, system administrators can enhance overall security and mitigate exposure to unauthorized access.
+Output:
+
+
+
+![Screenshot 2024-06-27 122527](https://github.com/chinmay161/Linux-File-Permissions-Audit-Tool/assets/120262856/43442f55-9442-451d-b1f6-8f06854aa834)
+
 
 ### Step 6: Interpret Results and Take Action
 Analyze the output of the script to identify any files with overly permissive permissions or other security vulnerabilities. Take appropriate action to address any identified risks, such as adjusting permissions or applying access controls as needed.
@@ -90,3 +102,6 @@ Analyze the output of the script to identify any files with overly permissive pe
 If necessary, customize the script to suit your specific requirements. You can modify the script to include additional checks, filters, or reporting options based on your unique security needs.
 
 By following these steps, you can effectively execute the  Bash script to audit file permissions and enhance the security of your Linux system.
+
+## Contribute
+Feel free to fork this repository, propose changes, or suggest improvements via pull requests.
